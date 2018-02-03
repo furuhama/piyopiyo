@@ -128,6 +128,15 @@ end
 # これらは以下と同値
 (1..20).map { |x| x.triple }
 (1..20).select { |x| x.three? }
+
+# ちなみに inject(reduce) はこんな感じ
+require 'prime'
+(1..10).select(&:prime?).inject { |prod, n| prod * n }
+# => 210
+
+# シンボルを利用してこんな書き方もできる
+(1..10).select(&:prime?).inject(:*)
+# => 210
 {% endhighlight %}
 
 Symbol#to_proc を簡単に String に拡張してみる
