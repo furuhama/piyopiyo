@@ -16,7 +16,8 @@
 title: "Piyo :: f -> y"
 email: example@example.piyo
 description: >- # this means to ignore newlines until "baseurl:"
-  Extended memory module for my poor native memory.
+  Extended outer memory module<br>
+  for my poor native memory.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://furuhama.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: fullhamax
