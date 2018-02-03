@@ -22,11 +22,14 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://furuhama.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: fullhamax
 github_username: furuhama
+github: [metadata]
 
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-minimal
 plugins:
+  - jemoji
+  - jekyll-sitemap
   - jekyll-feed
 
 # Exclude from processing.
