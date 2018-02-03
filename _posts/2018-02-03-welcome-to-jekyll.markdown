@@ -1,25 +1,34 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2018-02-03 11:33:00 +0900
+title:  "Rubyを関数型っぽく扱う"
+date:   2018-02-03 15:49:00 +0900
+tag: [ruby, fuctional]
 categories: jekyll update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Jekyll で Github pages はじめた。
 
-Jekyll also offers powerful support for code snippets:
+最近、関数型言語面白いなと感じるので
+Rubyでごにょごにょしてみる。
 
 {% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
+# fizzbuzz by functional way
+
+class FizzBuzz
+  def self.to_proc
+    # `->n{` is ok as well
+    lambda { |n|
+      case n % 15
+      when 0 then :FizBuzz
+      when 3, 6, 9, 12 then :Fizz
+      when 5, 10 then :Buzz
+      else n
+      end
+    }
+  end
 end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+
+puts (1..100).map(&FizzBuzz)
+#=> 1, 2, :Fizz, 4, :Buzz, ...
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
