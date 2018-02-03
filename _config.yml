@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: "Piyo :: f -> y"
+lang: ja-jp
 email: example@example.piyo
 description: >- # this means to ignore newlines until "baseurl:"
   Extended outer memory module<br>
