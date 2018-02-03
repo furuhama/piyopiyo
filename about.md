@@ -1,12 +1,24 @@
 ---
 layout: default
-title: About
+title: About: me
 permalink: /about/
 ---
 
-にゃーーーーーーーーーーーーーーーん
+## About: me
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+#### name:
+Furuhama Yusuke
+
+#### language:
+Ruby, Python
+(also like: Golang, Rust, Haskell, Lisp)
+
+#### education:
+University of Tokyo student
+
+
+-
+
 
 You can find the source code for Jekyll at GitHub:
 [jekyll][jekyll-organization] /

@@ -28,7 +28,6 @@ markdown: kramdown
 theme: jekyll-theme-minimal
 plugins:
   - jemoji
-  - jekyll-sitemap
   - jekyll-feed
 
 # Exclude from processing.
