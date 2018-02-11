@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Webのコンセプト"
-date:   2018-02-11 11:00:00 +0900
+date:   2018-02-11 12:00:00 +0900
 tag: [web]
 ---
 
@@ -79,10 +79,10 @@ REST の場合
 {% highlight javascript %}
 {
   "user": {
-		"first_name": "おでん君",
-		"last_name": "ハイパー",
-		"age": 65536
-	}
+    "first_name": "おでん君",
+    "last_name": "ハイパー",
+    "age": 65536
+  }
 }
 {% endhighlight %}
 
@@ -91,20 +91,20 @@ HATEOAS の場合
 {% highlight javascript %}
 {
   "user": {
-		"first_name": "おでん君",
-		"last_name": "ハイパー",
-		"age": 65536,
-		"links": [
-			{
-				"rel": "self",
-				"href": "https://piyofunction.com/piyo/user/1"
-			},
-			{
-				"rel": "roles",
-				"href": "https://piyofunction.com/piyo/user/1/roles"
-			}
-		]
-	}
+    "first_name": "おでん君",
+    "last_name": "ハイパー",
+    "age": 65536,
+    "links": [
+      {
+        "rel": "self",
+        "href": "https://piyofunction.com/piyo/user/1"
+      },
+      {
+        "rel": "roles",
+        "href": "https://piyofunction.com/piyo/user/1/roles"
+      }
+    ]
+  }
 }
 {% endhighlight %}
 
