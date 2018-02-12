@@ -1,4 +1,4 @@
-### github pages by Jekyll
+## github pages by Jekyll
 
 title: `Piyo :: f -> y`
 
