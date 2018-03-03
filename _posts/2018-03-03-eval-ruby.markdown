@@ -1,0 +1,100 @@
+---
+layout: post
+title:  "Rubyの eval をちゃんと知る"
+date:   2018-03-03 15:00:00 +0900
+tag: [ruby]
+---
+
+メタプログラミング(動的なメソッドや変数の生成)には欠かせない
+Ruby の `eval` やその周辺について。
+
+きほん
+
+{% highlight ruby %}
+
+eval "p 'hoge'"
+# => "hoge"
+
+eval "1 + 2"
+# => 3
+
+# eval で渡された引数を式として評価する
+
+{% endhighlight %}
+
+動的なインスタンス変数生成
+
+{% highlight ruby %}
+
+class Language
+  def initialize(options = {})
+    options.each do |name, value|
+      eval "@#{name} = #{value}"
+    end
+  end
+
+  def define_method(options = {})
+    options.each do |name, value|
+      eval <<-EOS
+        def #{name}
+          p #{value}
+        end
+      EOS
+    end
+  end
+end
+
+{% endhighlight %}
+
+Binding オブジェクト
+
+{% highlight ruby %}
+
+def bind_method
+  local_var = 'this is local'
+
+  binding
+end
+
+eval "p local_var", bind_method
+# => "this is local"
+# eval の第二引数として Binding オブジェクトを渡すことで
+# 第一引数の式の中で ローカル変数が取れるようになる
+
+# ちなみに
+p bind_method.class
+# => Binding
+
+{% endhighlight %}
+
+Binding オブジェクトでインスタンス変数にアクセスする
+
+{% highlight ruby %}
+
+class Language
+  def initialize
+    @name = "Haskell"
+  end
+
+  def bind
+    binding
+  end
+end
+
+fl = Language.new
+
+eval "p @name", fl.bind
+# => "Haskell"
+# こんな感じで呼べるようになる
+
+# binding はその文脈を外から再現するような感じっぽい
+
+{% endhighlight %}
+
+--
+
+参考:
+
+- [Rubyのevalメソッドの使い方](http://uxmilk.jp/25938)
+- [Ruby における Binding オブジェクトとは](http://uxmilk.jp/33886)
+
