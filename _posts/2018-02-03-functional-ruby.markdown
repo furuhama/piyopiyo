@@ -83,6 +83,84 @@ Proc.new { |x| x * x }
 # どれも call で呼べる
 {% endhighlight %}
 
+無名関数の定義の仕方による違い
+
+{% highlight ruby %}
+
+# 前提:
+# Proc.new と proc は同じ
+# lambda と -> は同じ
+
+# 違い 1: Proc.new => 引数の数が少なくても nil で補ってくれる
+#         lambda  =>  引数の数が合わないと ArgumentError が発生する
+
+proc = Proc.new{ |a, b, c| p "#{a}, #{b}, #{c}" }
+proc.call(2, 4)
+# => "2, 4, " (nil で補っている)
+
+lamb = lambda { |a, b, c| p "#{a}, #{b}, #{c}" }
+lamb.call(2, 4)
+# => ArgumentError: wrong number of arguments (given 2, expected 3)
+
+lamb2 = ->(a, b, c){ p "#{a}, #{b}, #{c}" }
+lamb2.call(2, 4)
+# => ArgumentError: wrong number of arguments (given 2, expected 3)
+
+# ==============
+
+# 違い 2: return 後の挙動が異なる
+
+# Proc.new, proc の場合
+def method_proc
+  proc = Proc.new { return p "proc"}
+  proc.call
+
+  p "hi, my name is furuhama"
+end
+
+method_proc
+# => "proc"
+# 'hi, my name is furuhama' のプリント行にまで到達する前に return を読んで
+# method_proc の実行自体を終了する
+
+# lambda, ->() の場合
+def method_lambda
+  lamb = lambda{ return p "nyanko"}
+  lamb.call
+
+  p "method_lambdaaaaaaaaaaaaaa"
+end
+
+method_lambda
+# => "nyanko"
+#    "method_lambdaaaaaaaaaaaaaa"
+# 'method_lambda' は lambda 式の中の return を読んでも
+# 実行を終了しない(無視する)
+
+# 一応 proc と ->() の場合も見ておく
+def small_proc
+  proc = proc { return p "small proc" }
+  proc.call
+
+  p "I will never be called"
+end
+
+small_proc
+# => "small proc"
+
+def method_arrow
+  arr = -> { return p "->->->" }
+  arr.call
+
+  p "remember the milk"
+end
+
+method_arrow
+# => "->->->"
+#    "remember the milk"
+
+{% endhighlight %}
+
 to_proc 定義による拡張
 
 {% highlight ruby %}
@@ -199,4 +277,5 @@ puts (1..100).map(&FizzBuzz)
 
 - [Procを制する者がRubyを制す（嘘）](http://melborne.github.io/2014/04/28/proc-is-the-path-to-understand-ruby/)
 - [Ruby block/proc/lambdaの使いどころ](https://qiita.com/kidach1/items/15cfee9ec66804c3afd2)
+- [Rubyの ブロック、Proc.new、lambdaの違い](https://qiita.com/ryo-ma/items/24c46592b45775e8644d)
 
