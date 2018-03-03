@@ -77,10 +77,13 @@ yield_fn(256) { |x| x * x }
 
 {% highlight ruby %}
 # Proc class のインスタンスをつくる(無名関数)
-lambda { |x| x * x }
 Proc.new { |x| x * x }
+proc { |x| x * x }
+lambda { |x| x * x }
 ->x{ x * x }
 # どれも call で呼べる
+# 細かい挙動は次に挙げるように Proc.new, proc と
+# lambda, ->() で異なる
 {% endhighlight %}
 
 無名関数の定義の仕方による違い
@@ -158,6 +161,34 @@ end
 method_arrow
 # => "->->->"
 #    "remember the milk"
+
+{% endhighlight %}
+
+カリー化する(部分適用できる形にする)
+
+{% highlight ruby %}
+
+require 'date'
+
+# 期間と対象日を引数として、対象日が期間に入っているかどうかを確かめる関数
+# カリー化して季節を期間として定義しておくことで
+# 別のタイミングで対象日を引数としてもらって確かめることができるようにする
+season = lambda{|range, date| range.include? Date.parse(date).mon }.curry
+
+# 季節の定義(もともとの関数の一つ目の引数を固定するようなイメージ)
+is_spring = season[4..6]
+is_summer = season[7..9]
+is_autumn = season[10..12]
+is_winter = season[1..3]
+
+is_autumn['11/23']
+# => true
+is_summer['1/1']
+# => false
+
+# ただしカリー化して定義した関数に引数を渡すときは
+# function[argument] の記法としなきゃいけないっぽい
+# function(argument) だと怒られる (あくまで is_spring とかは変数なので、関数ではない)
 
 {% endhighlight %}
 
