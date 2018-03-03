@@ -8,7 +8,7 @@ tag: [ruby, fuctional]
 Jekyll で Github pages はじめた。
 
 最近、関数型言語面白いなと感じるので
-Rubyでごにょごにょしてみる。
+Ruby でごにょごにょしてみる。
 
 ### Object#method
 
