@@ -22,27 +22,117 @@ eval "1 + 2"
 
 {% endhighlight %}
 
-動的なインスタンス変数生成
+動的なメソッドやインスタンス変数生成
 
 {% highlight ruby %}
 
 class Language
   def initialize(options = {})
+    # インスタンス変数を生成
     options.each do |name, value|
       eval "@#{name} = #{value}"
+      # attr_reader と同じ(getter を定義)
+      eval "def #{name}; @#{name}; end"
     end
   end
 
-  def define_method(options = {})
+  def my_define(options = {})
+    # メソッドを生成
     options.each do |name, value|
       eval <<-EOS
-        def #{name}
-          p #{value}
+        def print_#{name}
+          p '#{value}'
         end
       EOS
     end
   end
 end
+
+lang = Language.new({haskell: 'functional'})
+
+p lang.haskell
+# => "functional"
+
+lang.my_define({ruby: 'object-oriented'})
+lang.print_ruby
+# => "object-oriented"
+
+{% endhighlight %}
+
+instance_eval と class_eval
+
+{% highlight ruby %}
+
+class Piyo; end
+
+p1 = Piyo.new
+p2 = Piyo.new
+
+# ブロックを渡してそれを評価する
+
+p1.instance_eval do
+  def say
+    p 'piyopiyo'
+  end
+end
+
+p1.say
+# => "piyopiyo"
+p2.say
+# => NoMethodError
+
+Piyo.class_eval do
+  def roar
+    p 'ugaaaa'
+  end
+end
+
+p1.roar
+p2.roar
+# どちらも => "ugaaaa"
+
+{% endhighlight %}
+
+instance_eval で private method 呼び出し
+
+{% highlight ruby %}
+
+class SecretInfo
+  def initialize
+    @title = 'very secret'
+  end
+
+  private
+
+  def details
+    'this is secret, DO NOT USE THIS METHOD!!!'
+  end
+end
+
+secret = SecretInfo.new
+
+p secret.instance_eval { details }
+# => "this is secret, DO NOT USE THIS METHOD!!!"
+# private method にアクセスする方法のひとつ
+
+{% endhighlight %}
+
+無名関数との合わせ技
+
+{% highlight ruby %}
+
+def books(prefix)
+  lambda{|titles| titles.map {|title| "#{prefix} #{title}" } }
+end
+
+# 関数定義
+my_book_maker = books "Effective"
+# つまりこの時点で my_book_maker は
+# lambda{|titles| titles.map {|title| "Effective #{title}" } }
+# という Proc オブジェクト
+
+p my_book_maker.call ["C++", "Ruby", "Haskell"]
+# => ["Effective C++", "Effective Ruby", "Effective Haskell"]
 
 {% endhighlight %}
 
@@ -97,4 +187,5 @@ eval "p @name", fl.bind
 
 - [Rubyのevalメソッドの使い方](http://uxmilk.jp/25938)
 - [Ruby における Binding オブジェクトとは](http://uxmilk.jp/33886)
+- [Rubyでメタプログラミングことはじめ](https://qiita.com/iguchi1124/items/a2a64f27e6dabbac1301)
 
