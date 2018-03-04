@@ -186,9 +186,11 @@ is_autumn['11/23']
 is_summer['1/1']
 # => false
 
-# ただしカリー化して定義した関数に引数を渡すときは
-# function[argument] の記法としなきゃいけないっぽい
-# function(argument) だと怒られる (あくまで is_spring とかは変数なので、関数ではない)
+# lambda 式に引数を渡して評価させる時に使える記法は
+# hogehoge.call(argument) (= hogehoge.call argument )
+# hogehoge[argument]
+# hogehoge.(argument)
+# などがある(上でやっているのもそのうちの一つ)
 
 {% endhighlight %}
 
