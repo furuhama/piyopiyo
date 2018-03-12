@@ -1,0 +1,84 @@
+---
+layout: post
+title:  "qemuでxv6のエミュレート(環境構築メモ)"
+date:   2018-03-12 23:00:00 +0900
+tag: [os, qemu, xv6]
+---
+
+急に qemu で xv6 動かしてみたくなってしまったので、
+どうやったら動いたかをメモする
+
+xv6 は MIT の授業で使われてるっぽいシンプルな OS
+詳しくは[講義ページ](https://pdos.csail.mit.edu/6.828/2017/xv6.html)とか見ると良さそう
+
+--
+
+### 僕の環境
+
+{% highlight %}
+- OSX High Sierra 10.13.3
+{% endhighlight %}
+
+なので elf binary(バイナリの形式の一つ)を使う x86(Intel の 32-bit CPU アーキテクチャのこと)用にクロスコンパイルするために
+toolchain を揃えなきゃいけないみたい
+compiler toolchain に関しては講義ページ内の[ここ](https://pdos.csail.mit.edu/6.828/2017/tools.html)に書いてある
+
+--
+
+### 必要なもの(Homebrewとかで)
+
+{% highlight %}
+- gcc49
+- qemu
+- brew tap altkatz/gcc_cross_compilers
+- brew install --with-all-targets gdb
+  - ビルドに結構時間かかる
+- brew install i386-elf-gcc i386-elf-binutils
+  - i386 elf をサポートしてる toolchain
+{% endhighlight %}
+
+### 必要なもののバージョン
+
+{% highlight %}
+- gcc 4.9.4
+- qemu 2.11.1
+- gdb 8.1
+- i386-elf-gcc
+- i386-elf-binutils
+{% endhighlight %}
+
+### gdb について
+
+使えるようにするまでなかなか面倒みたい
+
+{% highlight %}
+- .gdbinit ファイル
+  - 調べればわかると思います。(参考: [僕の](https://github.com/furuhama/dotfiles/blob/master/.gdbinit))
+- システム証明書の発行
+  - golang の debugger である delve のための証明書の時もはまったんだけど
+  - 証明書アシスタントからシステム証明書を直接作成しようとするとエラーが出てしまうので
+  - `一旦ログイン証明書を作ってそれをシステム証明書に移動させて使う` というやり方をしている
+- システム証明書の確認
+  - codesign -vv `which gdb`
+    - /usr/local/bin/gdb: code object is not signed at all
+    - In architecture: x86_64
+    - とか言われる(証明書が発行されていない状態)
+- 作成したシステム証明書を gdb 用に設定する
+  - sudo codesign -s gdb-cert /usr/local/bin/gdb
+- 再びシステム証明書の確認
+  - codesign -vv `which gdb`
+    - /usr/local/bin/gdb: valid on disk
+    - /usr/local/bin/gdb: satisfies its Designated Requirement
+    - と出てたら良さそう
+- taskgated を一度 sudo kill する
+- これで gdb が使えるはず
+{% endhighlight %}
+
+--
+
+参考:
+
+- [32bit 版 xv6 を Yosemite で動かす](https://attonblog.blogspot.jp/2015/04/32bit-xv6-yosemite.html)
+- [Tips for Productive Debugging with GDB](https://metricpanda.com/tips-for-productive-debugging-with-gdb)
+- [macOS Sierraでgdbを使う](https://qiita.com/kaityo256/items/d2f7ac7acc42cf2098b2)
+
