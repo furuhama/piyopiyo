@@ -25,23 +25,20 @@ compiler toolchain に関しては講義ページ内の[ここ](https://pdos.csa
 
 ### 必要なもの(Homebrewとかで)
 
-- gcc49
+- gcc
 - qemu
-- brew tap altkatz/gcc_cross_compilers
-- brew install --with-all-targets gdb
-  - ビルドに結構時間かかる
-- brew install i386-elf-gcc i386-elf-binutils
-  - i386 elf をサポートしてる toolchain
+- gdb
+  - brew install --with-all-targets gdb
+    - ビルドに結構時間かかる
 
 --
 
 ### 必要なもののバージョン
 
-- gcc 4.9.4
+- gmp 5.0.2
+- gcc X.X.X
 - qemu 2.11.1
 - gdb 8.1
-- i386-elf-gcc
-- i386-elf-binutils
 
 --
 
