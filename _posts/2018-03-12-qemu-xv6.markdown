@@ -21,10 +21,14 @@ xv6 は MIT の授業で使われてるっぽいシンプルな OS
 toolchain を揃えなきゃいけないみたい
 compiler toolchain に関しては講義ページ内の[ここ](https://pdos.csail.mit.edu/6.828/2017/tools.html)に書いてある
 
+そして /usr/local とかにぶち込むので基本的に全部 sudo でやればよさそう
+
 --
 
-### 必要なもの(Homebrewとかで)
+### 必要なもの(Homebrewとか自前ビルドとかで)
 
+- gmp, mpfr, mpc あたりのライブラリ(Homebrew 最新版)
+- binutils
 - gcc
 - qemu
 - gdb
@@ -35,8 +39,11 @@ compiler toolchain に関しては講義ページ内の[ここ](https://pdos.csa
 
 ### 必要なもののバージョン
 
-- gmp 5.0.2
-- gcc X.X.X
+- binutils 2.30
+- gcc 4.6.4
+  - gcc-4.5以前は新しいmakeinfoでエラーが出る
+  - gcc-4.7以降は配布物が全部入りとなり巨大
+    - らしいので 4.6.4 を入れました
 - qemu 2.11.1
 - gdb 8.1
 
@@ -74,4 +81,6 @@ compiler toolchain に関しては講義ページ内の[ここ](https://pdos.csa
 - [32bit 版 xv6 を Yosemite で動かす](https://attonblog.blogspot.jp/2015/04/32bit-xv6-yosemite.html)
 - [Tips for Productive Debugging with GDB](https://metricpanda.com/tips-for-productive-debugging-with-gdb)
 - [macOS Sierraでgdbを使う](https://qiita.com/kaityo256/items/d2f7ac7acc42cf2098b2)
+- [最低限のクロスコンパイラの作り方](https://qiita.com/7shi/items/2d44e040bae930d11088)
+- [gcc-4.6.1の対応アーキテクチャ](http://d.hatena.ne.jp/n7shi/20110722/1311322802)
 
