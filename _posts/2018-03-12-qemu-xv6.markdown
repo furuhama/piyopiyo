@@ -28,10 +28,10 @@ compiler toolchain に関しては講義ページ内の[ここ](https://pdos.csa
 ### 必要なもの(Homebrewとか自前ビルドとかで)
 
 - gmp, mpfr, mpc あたりのライブラリ(Homebrew 最新版)
-- binutils
-- gcc
-- qemu
-- gdb
+- binutils(最新版)
+- gcc(4.6.4 指定)
+- qemu(最新版)
+- gdb(最新版)
   - brew install --with-all-targets gdb
     - ビルドに結構時間かかる
 
@@ -41,11 +41,48 @@ compiler toolchain に関しては講義ページ内の[ここ](https://pdos.csa
 
 - binutils 2.30
 - gcc 4.6.4
-  - gcc-4.5以前は新しいmakeinfoでエラーが出る
-  - gcc-4.7以降は配布物が全部入りとなり巨大
-    - らしいので 4.6.4 を入れました
 - qemu 2.11.1
 - gdb 8.1
+
+--
+
+### gcc について
+
+- gcc-4.5以前は新しいmakeinfoでエラーが出る
+- gcc-4.7以降は配布物が全部入りとなり巨大
+
+とのことで、色々試したのち 4.6.4 を入れたらうまくいきました
+
+```
+tar xjf gcc-core-4.6.4.tar.bz2  # 解凍する
+cd gcc-4.6.4  # できた dir の中に入る
+mkdir build  # GCC will not compile correctly unless you build in a separate directory
+cd build
+
+# Makefile をつくる
+sudo ../configure --prefix=/usr/local \
+    --target=i386-jos-elf --disable-werror \
+    --disable-libssp --disable-libmudflap --with-newlib \
+    --without-headers --enable-languages=c
+
+sudo make all-gcc  # いくつか warning とか error は出るが無視した
+sudo make install-gcc         # This step may require privilege (sudo make install-gcc)
+sudo make all-target-libgcc
+sudo make install-target-libgcc     # This step may require privilege (sudo make install-target-libgcc)
+cd ../..
+
+i386-jos-elf-gcc -v  # ここで以下のように出れば ok ぽい
+# =>
+#  組み込み spec を使用しています。
+#  COLLECT_GCC=i386-jos-elf-gcc
+#  COLLECT_LTO_WRAPPER=/usr/local/libexec/gcc/i386-jos-elf/4.6.4/lto-wrapper
+#  ターゲット: i386-jos-elf
+#  configure 設定: ../configure --prefix=/usr/local --target=i386-jos-elf --disable-werror --disable-libssp --disable-libmudflap --with-newlib --without-headers --enable-languages=c
+#  スレッドモデル: single
+#  gcc バージョン 4.6.4 (GCC)
+```
+
+というわけでなんとか クロスコンパイル用の gcc toolchain が入った
 
 --
 
