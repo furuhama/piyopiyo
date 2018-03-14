@@ -6,9 +6,11 @@ tag: [os, qemu, xv6]
 ---
 
 急に qemu で xv6 動かしてみたくなってしまったので、
+
 どうやったら動いたかをメモする
 
 xv6 は MIT の授業で使われてるっぽいシンプルな OS
+
 詳しくは[講義ページ](https://pdos.csail.mit.edu/6.828/2017/xv6.html)とか見ると良さそう
 
 --
@@ -17,8 +19,12 @@ xv6 は MIT の授業で使われてるっぽいシンプルな OS
 
 - OSX High Sierra 10.13.3
 
-なので elf binary(バイナリの形式の一つ)を使う x86(Intel の 32-bit CPU アーキテクチャのこと)用にクロスコンパイルするために
+なので elf binary(バイナリの形式の一つ)を使う
+
+x86(Intel の 32-bit CPU アーキテクチャのこと)用にクロスコンパイルするために
+
 toolchain を揃えなきゃいけないみたい
+
 compiler toolchain に関しては講義ページ内の[ここ](https://pdos.csail.mit.edu/6.828/2017/tools.html)に書いてある
 
 そして /usr/local とかにぶち込むので基本的に全部 sudo でやればよさそう
@@ -51,7 +57,7 @@ compiler toolchain に関しては講義ページ内の[ここ](https://pdos.csa
 - gcc-4.5以前は新しいmakeinfoでエラーが出る
 - gcc-4.7以降は配布物が全部入りとなり巨大
 
-とのことで、色々試したのち 4.6.4 を入れたらうまくいきました
+とのことで、他のバージョンも色々試したのち 4.6.4 を入れたらうまくいきました
 
 ```
 tar xjf gcc-core-4.6.4.tar.bz2  # 解凍する
@@ -110,6 +116,15 @@ i386-jos-elf-gcc -v  # ここで以下のように出れば ok ぽい
     - と出てたら良さそう
 - taskgated を一度 sudo kill する
 - これで gdb が使えるはず
+
+### qemu での起動
+
+あとは簡単で xv6-public のソースを [MIT の github](https://github.com/mit-pdos/xv6-public) からもらってきて
+
+`make qemu`
+
+とコマンド叩くだけ
+
 
 --
 
