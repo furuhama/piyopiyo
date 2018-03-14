@@ -127,17 +127,17 @@ i386-jos-elf-gcc -v  # ここで以下のように出れば ok ぽい
 
 こんな感じで起動する
 
-![start]({{site.baseurl}}/_image/2018-03-12-qemu-xv6/01_start.png)
+![start](/images/2018-03-12-qemu-xv6/01_start.png)
 
 ### 適当にコマンド叩く
 
 ls コマンド
 
-![ls_in_shell]({{site.baseurl}}/_image/2018-03-12-qemu-xv6/02_ls_in_shell.png)
+![ls_in_shell](/images/2018-03-12-qemu-xv6/02_ls_in_shell.png)
 
 起動時に開く qemu のウィンドウから直接叩くことも可能
 
-![ls_in_qemu]({{site.baseurl}}/_image/2018-03-12-qemu-xv6/03_ls_in_qemu.png)
+![ls_in_qemu](/images/2018-03-12-qemu-xv6/03_ls_in_qemu.png)
 
 --
 
