@@ -127,11 +127,58 @@ i386-jos-elf-gcc -v  # ここで以下のように出れば ok ぽい
 
 こんな感じで起動する
 
+```
+workspace/xv6-public - [master] ( '-') make qemu
+dd if=/dev/zero of=xv6.img count=10000
+10000+0 records in
+10000+0 records out
+5120000 bytes transferred in 0.079054 secs (64765760 bytes/sec)
+dd if=bootblock of=xv6.img conv=notrunc
+1+0 records in
+1+0 records out
+512 bytes transferred in 0.000030 secs (17043521 bytes/sec)
+dd if=kernel of=xv6.img seek=1 conv=notrunc
+315+1 records in
+315+1 records out
+161452 bytes transferred in 0.001818 secs (88810330 bytes/sec)
+qemu-system-i386 -serial mon:stdio -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 2 -m 512
+xv6...
+cpu1: starting 1
+cpu0: starting 0
+sb: size 1000 nblocks 941 ninodes 200 nlog 30 logstart 2 inodestart 32 bmap start 58
+init: starting sh
+$  # <- コンソール立ち上がった
+```
+
 ![start](/images/2018-03-12-qemu-xv6/01_start.png)
 
 ### 適当にコマンド叩く
 
 ls コマンド
+
+```
+$ ls
+.              1 1 512
+..             1 1 512
+README         2 2 2290
+cat            2 3 12208
+echo           2 4 11396
+forktest       2 5 7204
+grep           2 6 13720
+init           2 7 11784
+kill           2 8 11348
+ln             2 9 11328
+ls             2 10 13280
+mkdir          2 11 11404
+rm             2 12 11388
+sh             2 13 21192
+stressfs       2 14 11852
+usertests      2 15 49048
+wc             2 16 12720
+zombie         2 17 11136
+console        3 18 0
+$
+```
 
 ![ls_in_shell](/images/2018-03-12-qemu-xv6/02_ls_in_shell.png)
 
