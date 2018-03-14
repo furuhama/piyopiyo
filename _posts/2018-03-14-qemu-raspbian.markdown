@@ -52,7 +52,7 @@ $ qemu-system-arm -kernel ./kernel-qemu-4.4.34-jessie \
 
 ![start](/images/2018-03-14-qemu-raspbian/01_start.png)
 
-### 生成されたファイルの書き換え(skip)
+### 生成されたファイルの書き換え
 
 たぶん立ち上がった raspbian の中でこのコマンドやるってことだと思う
 
