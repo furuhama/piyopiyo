@@ -74,9 +74,15 @@ $ qemu-system-arm -kernel ./kernel-qemu-4.4.34-jessie \
 -net user,hostfwd=tcp::5022-:22
 ```
 
+立ち上がった！
+
+![standup](/images/2018-03-14-qemu-raspbian/02_standup.png)
+
 これでホストマシンの 5022 番ポートと仮想マシンの 22 番ポートを結んでいる
 
-`ssh -p 5022`
+はずなんだけど `ssh -p 5022` ができない、、
+
+またあとで調べよう
 
 --
 
