@@ -134,6 +134,13 @@ pub fn concurrent_with_channel() {
 
 書いたらまた更新する。
 
+### 2018/08/04 追記
+
+ぼーっとしていたら Rust の標準に futures が入りそうになってた
+非同期処理が簡単になるといいねえ。
+
+http://rust-lang-nursery.github.io/futures-rs/
+
 {% highlight rust %}
 
 pub fn say_goodbye() {
