@@ -23,8 +23,6 @@ rust で書いた wasm binary を Firefox 上で動かした。
 
 僕の完成品は[こちら](https://github.com/furuhama/wasm_lifegame)です。
 
---
-
 ### 僕の環境
 
 - OSX High Sierra 10.13.3
@@ -32,14 +30,10 @@ rust で書いた wasm binary を Firefox 上で動かした。
   - (beta とか stable でも動くはずです)
   - (chrome には「君 buffer 使いすぎでは？！？！」みたいな怒られ方をされました)
 
---
-
 ### 必要なもの(Homebrewとか自前ビルドとかで)
 
 - node.js
 - wasm-bindgen-cli tool
-
---
 
 ## 詳しいやり方
 
@@ -48,8 +42,6 @@ rust で書いた wasm binary を Firefox 上で動かした。
 あと僕は[ここ](https://rust-lang-nursery.github.io/rust-wasm/game-of-life/introduction.html)も参考にしました。
 
 ほとんど上にあげた URL で情報は足りると思います。
-
---
 
 ### 初回起動
 
@@ -60,8 +52,6 @@ $ npm install
 $ npm run build-debug && npm run serve
 $ npm run build-release && npm run serve # release 版はこちら( build の option が変わるよ)
 ```
-
---
 
 ### 作業風景
 
@@ -88,8 +78,6 @@ $ npm run build-release && npm run serve # release 版はこちら( build の op
 
 ![third_lifegame](/images/2018-05-13-wasm-lifegame/third_lifegame.png)
 
---
-
 ## 思ったこと
 
 - ブラウザはデバイス間のアーキテクチャの差異を埋めてくれるので偉い
@@ -105,9 +93,7 @@ $ npm run build-release && npm run serve # release 版はこちら( build の op
   - プロダクションで投入するのは、よっぽどフルスタックのエンジニアがたくさんいて、状況に合わせて柔軟にメンテナンスできる状態でないときついのでは。
 - フロントは面白いけど難しい(a575)
 
---
-
-参考:
+## 参考:
 
 - [wasm-bindgen](https://github.com/rustwasm/wasm-bindgen)
 - [rust-wasm/game-of-life](https://rust-lang-nursery.github.io/rust-wasm/game-of-life/introduction.html)

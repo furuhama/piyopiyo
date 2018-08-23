@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Rspecのまとめ"
+title:  "Rspec のまとめ"
 date:   2018-02-03 16:50:00 +0900
 tag: [ruby]
 ---
