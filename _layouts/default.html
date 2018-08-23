@@ -16,11 +16,11 @@
   <body>
     <div class="wrapper">
       <header>
-        <a href="{{ site.github.url }}"> <h1>{{ site.title | default: site.github.repository_name }}</h1> </a>
+        <a href="{{ site.url }}/"> <h1>{{ site.title | default: site.github.repository_name }}</h1> </a>
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
         {% if site.github.is_project_page %}
-          <p class="view">View: <a href="{{ site.github.repository_url }}">GitHub <small>{{ github_username }}</small></a></p>
+          <p class="view">View: <a href="https://github.com/{{ site.github_username }}">GitHub <small>{{ site.github_username }}</small></a></p>
         {% endif %}
 
         {% if site.github.is_user_page %}
@@ -47,7 +47,7 @@
       </section>
       <footer>
         <p>
-          <small>This site is maintained by furuhama yusuke.<br>2018-</small>
+          <small>This site is maintained by furuhama yusuke.<br>from 2018 - </small>
         </p>
       </footer>
     </div>
