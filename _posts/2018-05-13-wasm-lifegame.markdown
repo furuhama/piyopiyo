@@ -50,7 +50,7 @@ node の npm run コマンドにビルドからサーバースタートまでの
 ```
 $ npm install
 $ npm run build-debug && npm run serve
-$ npm run build-release && npm run serve # release 版はこちら( build の option が変わるよ)
+$ npm run build-release && npm run serve # release 版はこちら (build の option が変わるよ)
 ```
 
 ### 作業風景
