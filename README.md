@@ -1,5 +1,3 @@
-## github pages by Jekyll
+## my blog
 
-title: `Piyo :: f -> y`
-
-url: [`https://furuhama.github.io/`](https://furuhama.github.io/)
+[`Piyo :: f -> y`](https://furuhama.github.io/)
