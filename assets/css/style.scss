@@ -107,6 +107,13 @@ ul {
   }
 }
 
+p.view {
+  line-height: 1.3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .highlight {
   background-color: #EFEFEF;
 }
