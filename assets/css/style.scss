@@ -3,39 +3,47 @@
 
 @import "{{ site.theme }}";
 
+$font-primary-color: #375EAB;
+$font-base-color: #222;
+$font-code-comment-color: #AAA;
+$background-code-color: #EFEFEF;
+$background-title-color: #E0EBF5;
+$base-font-family: Arial, sans-serif;
+$code-font-family: Menlo, monospace;
+
 body {
-  color: #222;
+  color: $font-base-color;
   font: 12px;
-  font-family: Arial, sans-serif;
+  font-family: $base-font-family;
   font-weight: 400;
   line-height: 1.8em;
   padding: 50px;
 }
 
 h1 {
-  color: #375EAB;
-  font-family: Arial, sans-serif;
+  color: $font-primary-color;
+  font-family: $base-font-family;
   font-weight: bold;
 }
 
 h1.post-title {
-  background: #E0EBF5;
-  font-family: Arial, sans-serif;
+  background: $background-title-color;
+  font-family: $base-font-family;
   font-weight: normal;
   line-height: 1.25;
   padding: 8px;
 }
 
 h2 {
-  background: #E0EBF5;
-  color: #375EAB;
+  background: $background-title-color;
+  color: $font-primary-color;
   font-weight: normal;
   line-height: 1.25;
   padding: 8px;
 }
 
 h3 {
-  color: #375EAB;
+  color: $font-primary-color;
   font-weight: bold;
   font-size: 18px;
   margin-bottom: 30px;
@@ -43,11 +51,11 @@ h3 {
 }
 
 code, pre {
-  background: #EFEFEF;
-  background-color: #EFEFEF;
+  background: $background-code-color;
+  background-color: $background-code-color;
   border: 0px;
   border-radius: 5px;
-  font-family: Menlo, monospace;
+  font-family: $code-font-family;
   font-size: 12px;
   margin: 20px;
 }
@@ -87,7 +95,7 @@ small {
 }
 
 a {
-  color: #375EAB;
+  color: $font-primary-color;
 
   &:hover {
     font-weight: normal;
@@ -96,7 +104,7 @@ a {
 }
 
 ul {
-  background-color: #EFEFEF;
+  background-color: $background-code-color;
   border-radius: 5px;
   padding-bottom: 10px;
   padding-top: 10px;
@@ -109,7 +117,7 @@ ul {
   }
 
   li {
-    font-family: Menlo, monospace;
+    font-family: $code-font-family;
     font-size: 12px;
     margin-bottom: 2px;
   }
@@ -131,24 +139,24 @@ footer {
 }
 
 .highlight {
-  background-color: #EFEFEF;
+  background-color: $background-code-color;
 
   .nf, .nc, .mi, .nd {
-    color: #375EAB;
+    color: $font-primary-color;
   }
 
   .nb, .n, .no, .s, .s1, .s2, .si, .sh, .vi {
-    color: #222;
+    color: $font-base-color;
   }
 
   .c, .c1, .c2 {
-    color: #AAA;
+    color: $font-code-comment-color;
     font-weight: 100;
   }
 }
 
 .highlighter-rouge {
-  background-color: #EFEFEF;
+  background-color: $background-code-color;
   border-radius: 5px;
   margin: 3px;
   margin-bottom: 10px;
