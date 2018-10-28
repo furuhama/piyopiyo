@@ -15,13 +15,16 @@
 # in the templates via {{ site.myvariable }}.
 title: バベルの図書館は完成しない
 lang: ja-jp
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
   Extended outer memory module<br>
   for my poor native memory.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://furuhama.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: fullhamax
 github_username: furuhama
+maintain_message: >-
+  This site is maintained by furuhama yusuke.<br>
+  from 2018 -
 
 # Build settings
 markdown: kramdown
