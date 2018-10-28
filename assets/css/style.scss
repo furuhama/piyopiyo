@@ -133,69 +133,15 @@ footer {
 .highlight {
   background-color: #EFEFEF;
 
-  .nf {
+  .nf, .nc, .mi, .nd {
     color: #375EAB;
   }
 
-  .nb {
+  .nb, .n, .no, .s, .s1, .s2, .si, .sh, .vi {
     color: #222;
   }
 
-  .nc {
-    color: #375EAB;
-  }
-
-  .n {
-    color: #222;
-  }
-
-  .no {
-    color: #222;
-  }
-
-  .mi {
-    color: #375EAB;
-  }
-
-  .nd {
-    color: #375EAB;
-  }
-
-  .s {
-    color: #222;
-  }
-
-  .s1 {
-    color: #222;
-  }
-
-  .s2 {
-    color: #222;
-  }
-
-  .si {
-    color: #222;
-  }
-
-  .sh {
-    color: #222;
-  }
-
-  .vi {
-    color: #222;
-  }
-
-  .c {
-    color: #AAA;
-    font-weight: 100;
-  }
-
-  .c1 {
-    color: #AAA;
-    font-weight: 100;
-  }
-
-  .c2 {
+  .c, .c1, .c2 {
     color: #AAA;
     font-weight: 100;
   }
