@@ -6,7 +6,7 @@ layout: default
 
 {{content}}
 
-<small>{{ page.date | date: "%-d %B %Y" }}</small>
+<small>{{ page.date | date: "%Y/%m/%d %H:%M" }}</small>
 <br>
 {% if page.tags %}
   <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>

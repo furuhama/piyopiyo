@@ -8,7 +8,7 @@ layout: default
       <h2>{{ post.title }}</h2>
       <a href="{{ post.url | prepend: site.baseurl }}">Read more</a><br>
 
-      <small>{{ post.date | date: "%-d %B %Y" }}</small>
+      <small>{{ post.date | date: "%Y/%m/%d" }}</small>
       <br>
       {% if post.tags %}
         <small>tags: <em>{{ post.tags | join: "</em> - <em>" }}</em></small>

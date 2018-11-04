@@ -27,7 +27,7 @@
           <small>
             {% for post in site.posts %}
               {% unless post.tags contains 'minipost' %}
-                <br>{{ post.date | date: "%b %-d, %Y" }} <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                <br>{{ post.date | date: "%Y/%m/%d" }} <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
               {% endunless %}
             {% endfor %}
           </small>
@@ -40,7 +40,7 @@
           <small>
             {% for post in site.posts %}
               {% if post.tags contains 'minipost' %}
-                <br>{{ post.date | date: "%b %-d, %Y" }} {{ post.title }}
+                <br>{{ post.date | date: "%Y/%m/%d" }} {{ post.title }}
               {% endif %}
             {% endfor %}
           </small>
