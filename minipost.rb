@@ -10,7 +10,7 @@ raise RuntimeError.new "Already exists #{minipost_title}" if File.exist? target_
 File.open(target_path, 'w') do |f|
   f.puts '---'
   f.puts 'layout: post'
-  f.puts 'title: ' # TODO: Set title from argument
+  f.puts 'title: '
   f.puts "date: #{time.strftime('%Y-%m-%d %H:%M:%S %z')}"
   f.puts 'tag: [minipost]'
   f.puts '---'
