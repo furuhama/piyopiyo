@@ -1,4 +1,4 @@
 ---
-layout: minipost_top
+layout: miniposts
 title: Miniposts
 ---
