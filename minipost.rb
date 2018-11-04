@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 time = Time.now
-minipost_title = time.strftime('%Y-%m-%d_%H%M%S') + '.markdown'
+minipost_title = time.strftime('%Y-%m-%d_%H%M') + '.markdown'
 minipost_directory = File.expand_path('../_posts/miniposts', __FILE__)
 target_path = minipost_directory + '/' + minipost_title
 
