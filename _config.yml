@@ -44,3 +44,4 @@ exclude:
   - tags
   - tags.lock
   - tags.temp
+  - README.md
