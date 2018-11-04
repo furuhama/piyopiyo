@@ -1,6 +1,6 @@
-## here's my blog
+## my blog
 
-[バベルの図書館は完成しない](https://furuhama.github.io/)
+-> [バベルの図書館は完成しない](https://furuhama.github.io/)
 
 ## Make a minipost
 
