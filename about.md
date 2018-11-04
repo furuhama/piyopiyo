@@ -13,7 +13,7 @@ Ruby, Rust, Golang
 (also like: Haskell, Lisp, C++, Python)
 
 #### education:
-University of Tokyo student
+2013-2018: University of Tokyo
 
 #### job:
-Software Engineer
+2018-: Software Engineer
