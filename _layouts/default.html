@@ -19,11 +19,29 @@
         <p>{{ site.description | default: site.github.project_tagline }}</p>
         <p class="view">View: <a href="https://github.com/{{ site.github_username }}">GitHub <small>{{ site.github_username }}</small></a></p>
         <p class="view">About: <a href="{{ site.url }}/about">me</a></p>
+
+        <!-- main posts -->
+
         <p class="view">
           Posts:
           <small>
             {% for post in site.posts %}
-              <br>{{ post.date | date: "%b %-d, %Y" }} <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+              {% unless post.tags contains 'minipost' %}
+                <br>{{ post.date | date: "%b %-d, %Y" }} <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+              {% endunless %}
+            {% endfor %}
+          </small>
+        </p>
+
+        <!-- mini posts like a dialy -->
+
+        <p class="view">
+          Miniposts: <a href="{{ site.url }}/minipost_top/">see</a><br>
+          <small>
+            {% for post in site.posts %}
+              {% if post.tags contains 'minipost' %}
+                <br>{{ post.date | date: "%b %-d, %Y" }} <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+              {% endif %}
             {% endfor %}
           </small>
         </p>
