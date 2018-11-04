@@ -36,11 +36,11 @@
         <!-- mini posts like a dialy -->
 
         <p class="view">
-          Miniposts: <a href="{{ site.url }}/miniposts/">see</a><br>
+            Miniposts: <a href="{{ site.url }}/miniposts/"> 👀 take a look 👀</a>
           <small>
             {% for post in site.posts %}
               {% if post.tags contains 'minipost' %}
-                <br>{{ post.date | date: "%b %-d, %Y" }} <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                <br>{{ post.date | date: "%b %-d, %Y" }} {{ post.title }}
               {% endif %}
             {% endfor %}
           </small>
