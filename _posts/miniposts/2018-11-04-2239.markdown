@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 仕事以外の時間
-date: 2018-11-04 22:39:35 +0900
+date: 2018-11-04 22:39:35
 tag: [minipost]
 ---
 
