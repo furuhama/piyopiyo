@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Rust で web アプリ、 或いは Rust における並列処理"
-date:   2018-07-01 00:00:00 +0900
+date:   2018-07-01 00:00:00
 tag: [rust, concurrent]
 ---
 

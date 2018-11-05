@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Rust で wasm 使って lifegame 書いた時のメモ"
-date:   2018-05-13 23:00:00 +0900
+date:   2018-05-13 23:00:00
 tag: [rust, wasm, javascript]
 ---
 
