@@ -11,7 +11,7 @@ File.open(target_path, 'w') do |f|
   f.puts '---'
   f.puts 'layout: post'
   f.puts 'title: '
-  f.puts "date: #{time.strftime('%Y-%m-%d %H:%M:%S %z')}"
+  f.puts "date: #{time.strftime('%Y-%m-%d %H:%M:%S')}"
   f.puts 'tag: [minipost]'
   f.puts '---'
 end
