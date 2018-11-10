@@ -8,6 +8,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    coderay (1.1.2)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -198,6 +199,7 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
     mercenary (0.3.6)
+    method_source (0.9.1)
     mini_portile2 (2.3.0)
     minima (2.5.0)
       jekyll (~> 3.5)
@@ -211,6 +213,9 @@ GEM
       sawyer (~> 0.8.0, >= 0.5.3)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
+    pry (0.12.0)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
     public_suffix (2.0.5)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
@@ -246,6 +251,7 @@ DEPENDENCIES
   jekyll
   jekyll-feed
   jekyll-theme-minimal
+  pry
   tzinfo-data
 
 BUNDLED WITH
