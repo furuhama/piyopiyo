@@ -10,10 +10,10 @@ window.onload = function() {
 };
 
 // Toggle colormode
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   var checkbox = document.querySelector('input[type="checkbox"]');
 
-  checkbox.addEventListener('change', function () {
+  checkbox.addEventListener('change', () => {
     if (checkbox.checked) {
       console.log('Checked');
 
@@ -30,22 +30,22 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-function toggleColorToDark() {
+toggleColorToDark = () => {
   console.log('Set all colors to dark');
 
   toggleElementColorToDark(document.body);
 };
 
-function toggleColorToLight() {
+toggleColorToLight = () => {
   console.log('Set all colors to light');
 
   toggleElementColorToLight(document.body);
 };
 
-function toggleElementColorToDark(element) {
+toggleElementColorToDark = (element) => {
   element.className += " dark";
 };
 
-function toggleElementColorToLight(element) {
+toggleElementColorToLight = (element) => {
   element.className -= " dark";
 };
