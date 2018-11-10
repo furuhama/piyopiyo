@@ -1,9 +1,9 @@
 // Confirm cookie value on load
 window.onload = function() {
-  var cookieNightModeArray = document.cookie.split(';').filter((item) => item.includes('night='));
+  var cookieDarkModeArray = document.cookie.split(';').filter((item) => item.includes('dark='));
 
-  // if cookie `night` is set to `true`, initialize pages with night mode
-  if (cookieNightModeArray.length !== 0 && cookieNightModeArray[0].includes('true')) {
+  // if cookie `dark` is set to `true`, initialize pages with dark mode
+  if (cookieDarkModeArray.length !== 0 && cookieDarkModeArray[0].includes('true')) {
     document.querySelector('input[type="checkbox"]').checked = true;
 
     toggleColorToDark();
@@ -18,13 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (checkbox.checked) {
       console.log('Checked');
 
-      document.cookie = "night=true; path=/";
+      document.cookie = "dark=true; path=/";
 
       toggleColorToDark();
     } else {
       console.log('Not checked');
 
-      document.cookie = "night=false; path=/";
+      document.cookie = "dark=false; path=/";
 
       toggleColorToLight();
     }
