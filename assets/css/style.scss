@@ -224,6 +224,10 @@ body.dark {
     background-color: $background-code-color-dark;
   }
 
+  strong {
+    color: $font-base-color-dark;
+  }
+
   .highlight, .highlighter-rouge {
     color: $font-base-color-dark;
     background-color: $background-code-color-dark;
