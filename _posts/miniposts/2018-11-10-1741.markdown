@@ -1,0 +1,19 @@
+---
+layout: post
+title: ブラウザにおける状態の持ち方
+date: 2018-11-10 17:41:49
+tag: [minipost]
+---
+
+ブラウザが状態が持つ方法っていくつかあると思うんだけど、
+
+僕の聞いたことのある範囲だと
+
+- cookie
+- localStorage
+- cacheStorage
+- indexedDB
+
+つーのがある。
+
+これの違いってなんなんじゃろ、あとで調べよう。
