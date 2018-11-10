@@ -41,6 +41,7 @@ exclude:
   - Gemfile.lock
   - vendor/bundle/
   - minipost.rb
+  - post.rb
   - tags
   - tags.lock
   - tags.temp
