@@ -2,6 +2,7 @@
 window.onload = function() {
   var cookieNightModeArray = document.cookie.split(';').filter((item) => item.includes('night='));
 
+  // if cookie `night` is set to `true`, initialize pages with night mode
   if (cookieNightModeArray.length !== 0 && cookieNightModeArray[0].includes('true')) {
     document.querySelector('input[type="checkbox"]').checked = true;
 
@@ -9,7 +10,7 @@ window.onload = function() {
   };
 };
 
-// Toggle colormode
+// Toggle colormode when checkbox is toggled
 document.addEventListener('DOMContentLoaded', () => {
   var checkbox = document.querySelector('input[type="checkbox"]');
 
