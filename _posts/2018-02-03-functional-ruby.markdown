@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Ruby を関数型っぽく扱う"
-date:   2018-02-03 15:49:00
+title: Ruby を関数型っぽく扱う
+date: 2018-02-03 15:49:00
 tag: [ruby, fuctional]
 ---
 

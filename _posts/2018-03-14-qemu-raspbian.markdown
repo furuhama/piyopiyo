@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "qemu で raspbian のエミュレート(環境構築メモ)"
-date:   2018-03-12 23:00:00
+title: qemu で raspbian のエミュレート(環境構築メモ)
+date: 2018-03-12 23:00:00
 tag: [os, qemu, raspbian]
 ---
 

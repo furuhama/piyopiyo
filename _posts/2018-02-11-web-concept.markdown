@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Web のコンセプト"
-date:   2018-02-11 12:00:00
+title: Web のコンセプト
+date: 2018-02-11 12:00:00
 tag: [web]
 ---
 

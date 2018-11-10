@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "なぜテストを書くのか"
-date:   2018-05-14 00:00:00
+title: なぜテストを書くのか
+date: 2018-05-14 00:00:00
 tag: [test, poem]
 ---
 
