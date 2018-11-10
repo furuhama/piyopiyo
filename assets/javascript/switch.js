@@ -43,9 +43,9 @@ toggleColorToLight = () => {
 };
 
 toggleElementColorToDark = (element) => {
-  element.className += " dark";
+  element.className = "dark";
 };
 
 toggleElementColorToLight = (element) => {
-  element.className -= " dark";
+  element.className = "";
 };
