@@ -3,15 +3,30 @@
 
 @import "{{ site.theme }}";
 
+/* Color variables */
+
 $font-primary-color: #375EAB;
+$font-primary-color-dark: #9CD7F7;
 $font-base-color: #222;
 $font-base-color-dark: #fff;
 $font-code-comment-color: #AAA;
+$font-code-comment-color-dark: #aaa;
+$font-code-defintion-color-dark: #da5ada;
 $background-code-color: #EFEFEF;
+$background-code-color-dark: #1f3341;
 $background-title-color: #E0EBF5;
+$background-title-color-dark: #1f3341;
+$background-color-dark: #061f2f;
+$switch-button-color: #2196F3;
+$switch-color: #E0EBF5;
+$switch-color-dark: #1F3341;
+
+/* Font family variables */
+
 $base-font-family: Arial, sans-serif;
 $code-font-family: Menlo, monospace;
-$background-color-dark: #061f2f;
+
+/* Base colors */
 
 body {
   color: $font-base-color;
@@ -20,11 +35,6 @@ body {
   font-weight: 400;
   line-height: 1.8em;
   padding: 50px;
-}
-
-body.dark {
-  background-color: $background-color-dark;
-  color: $font-base-color-dark;
 }
 
 h1 {
@@ -171,7 +181,73 @@ footer {
   padding: 3px;
 }
 
+
+/* Dark mode colors */
+
+body.dark {
+  background: $background-color-dark;
+  color: $font-base-color-dark;
+
+  h1 {
+    color: $font-base-color-dark;
+  }
+
+  h2 {
+    background: $background-title-color-dark;
+    color: $font-primary-color-dark;
+  }
+
+  h3, h4 {
+    color: $font-primary-color-dark;
+  }
+
+  h1.post-title {
+    color: $font-primary-color-dark;
+    background: $background-title-color-dark;
+  }
+
+  a {
+    color: $font-primary-color-dark;
+  }
+
+  ul {
+    background-color: $background-code-color-dark;
+  }
+
+  th {
+    color: $font-base-color-dark;
+  }
+
+  code, pre {
+    color: $font-base-color-dark;
+    background: $background-code-color-dark;
+    background-color: $background-code-color-dark;
+  }
+
+  .highlight, .highlighter-rouge {
+    color: $font-base-color-dark;
+    background-color: $background-code-color-dark;
+
+    .k, .kp, .o, .ss {
+      color: $font-code-defintion-color-dark;
+    }
+
+    .nf, .nc, .mi, .nd, .nn {
+      color: $font-primary-color-dark;
+    }
+
+    .nb, .n, .no, .s, .s1, .s2, .si, .sh, .vi {
+      color: $font-base-color-dark;
+    }
+
+    .c, .c1, .c2 {
+      color: $font-code-comment-color-dark;
+    }
+  }
+}
+
 /* Switch styles */
+
 .switch {
   position: relative;
   display: inline-block;
@@ -192,7 +268,7 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: $switch-color;
 }
 
 .slider:before {
@@ -202,15 +278,11 @@ footer {
   width: 12px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: $switch-button-color;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  background-color: $switch-color-dark;
 }
 
 input:checked + .slider:before {
