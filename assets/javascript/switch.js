@@ -16,14 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   checkbox.addEventListener('change', () => {
     if (checkbox.checked) {
-      console.log('Checked');
-
       document.cookie = "dark=true; path=/";
 
       toggleColorToDark();
     } else {
-      console.log('Not checked');
-
       document.cookie = "dark=false; path=/";
 
       toggleColorToLight();
@@ -32,21 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 toggleColorToDark = () => {
-  console.log('Set all colors to dark');
-
-  toggleElementColorToDark(document.body);
+  document.body.className = "dark";
 };
 
 toggleColorToLight = () => {
-  console.log('Set all colors to light');
-
-  toggleElementColorToLight(document.body);
-};
-
-toggleElementColorToDark = (element) => {
-  element.className = "dark";
-};
-
-toggleElementColorToLight = (element) => {
-  element.className = "";
+  document.body.className = "";
 };
