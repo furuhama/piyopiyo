@@ -1,0 +1,18 @@
+---
+layout: post
+title: glibc
+date: 2018-11-12 08:52:36
+tag: [minipost]
+---
+
+今朝 linux のタイムゾーンのことを調べる機会があって、特に環境変数 `TZ` の仕組みについて調べていた。
+
+そしたら最終的に glibc のドキュメントに行き着いて、ほーんここは libc の範囲の話なのか 👀 となった
+
+http://www.gnu.org/software/libc/manual/html_node/TZ-Variable.html
+
+libc の役割がよくわかっていないな。 Linux kernel とごっちゃになることがあるから、多分何かを理解してないか勘違いしているかなんだと思う。
+
+これ最初から読んでみよう。(pdf とかもあるみたいで良い世界を感じる)
+
+http://www.gnu.org/software/libc/manual/html_node/index.html
