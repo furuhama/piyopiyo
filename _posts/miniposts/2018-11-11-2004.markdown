@@ -1,0 +1,8 @@
+---
+layout: post
+title: webpack
+date: 2018-11-11 20:04:21
+tag: [minipost]
+---
+
+最近よく聞くなと思って公式サイトの [concepts](https://webpack.js.org/concepts/) のドキュメント読んだ。「はーはーこういうものか基本的なアイデアは理解したわ」と思って、社内の webpack 使ってるリポジトリ覗きにいったらいきなり読むには複雑でつらい気持ちになった。あるある。
