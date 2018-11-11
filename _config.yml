@@ -46,3 +46,4 @@ exclude:
   - tags.lock
   - tags.temp
   - README.md
+  - node_modules/
