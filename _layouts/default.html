@@ -17,6 +17,7 @@
   <body>
     <div class="wrapper">
       <header>
+
         <a href="{{ site.url }}/"> <h1>{{ site.title | default: site.github.repository_name }}</h1></a>
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
@@ -28,7 +29,7 @@
         <p class="view">
           Posts:
           <small>
-            {% for post in site.posts limit: 5 %}
+            {% for post in site.posts %}
               {% unless post.tags contains 'minipost' %}
                 <br>{{ post.date | date: "%Y/%m/%d" }} <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
               {% endunless %}
@@ -39,9 +40,9 @@
         <!-- mini posts like a dialy -->
 
         <p class="view">
-            Miniposts: <a href="{{ site.url }}/miniposts"> 👀 take a look 👀</a>
+          Miniposts: <a href="{{ site.url }}/miniposts"> 👀 take a look 👀</a>
           <small>
-            {% for post in site.posts limit: 5 %}
+            {% for post in site.posts %}
               {% if post.tags contains 'minipost' %}
                 <br>{{ post.date | date: "%Y/%m/%d" }} {{ post.title }}
               {% endif %}
@@ -65,12 +66,13 @@
       </header>
 
       <section>
-        {{ content }}
-      </section>
 
-      <footer>
-        <p><small>{{ site.maintain_message }}</small></p>
-      </footer>
+        {{ content }}
+
+        <hr>
+
+        <small>{{ site.maintain_message }}</small>
+      </section>
     </div>
 
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
