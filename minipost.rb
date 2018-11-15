@@ -17,3 +17,5 @@ File.open(target_path, 'w') do |f|
 end
 
 puts "Created: #{minipost_title}"
+puts ''
+puts "Commit Message: Post a minipost #{time.strftime('%Y-%m-%d %H:%M')}"
