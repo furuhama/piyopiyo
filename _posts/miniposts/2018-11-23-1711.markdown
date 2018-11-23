@@ -1,0 +1,16 @@
+---
+layout: post
+title: プリプロセス
+date: 2018-11-23 17:11:04
+tag: [minipost]
+---
+
+ちょっと前に HackerNews で話題になってた(確か)これを読んでいる。
+
+https://github.com/green7ea/cpp-compilation
+
+`__FILE__` とか `__LINE__` とかがプリプロセスで展開(置換)されるって聞いてなるほどなってなった。今まであんまり考えてなかったけど、そう言われてみるとこのタイミングでやらないとなっていう。
+
+そして見に言った Wiki の記事がちゃんとしていて英語版はレベル高いなと思った。確か前に日本語で検索してもいい情報にたどり着けなかった記憶がある。覚え間違いかもしれないけど
+
+https://en.wikipedia.org/wiki/C_preprocessor
