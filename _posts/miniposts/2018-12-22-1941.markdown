@@ -1,0 +1,12 @@
+---
+layout: post
+title: musl
+date: 2018-12-22 19:41:13
+tag: [minipost]
+---
+
+Alpine とかで使われてる musl っていう libc の実装はなるべく(?)静的にリンクできるように最適化しているらしい。
+
+すると確かに、コンテナ環境で動く最低限のものだけ欲しいっていう場合はいいのかもしれない。
+
+ちなみに AWS の Fargate とかで動いている Firecracker っていう VM も musl を使っているらしー。
