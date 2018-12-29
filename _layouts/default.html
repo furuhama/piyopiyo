@@ -41,13 +41,6 @@
 
         <p class="view">
           Miniposts: <a href="{{ site.url }}/miniposts"> 👀 take a look 👀</a>
-          <small>
-            {% for post in site.posts %}
-              {% if post.tags contains 'minipost' %}
-                <br>{{ post.date | date: "%Y/%m/%d" }} {{ post.title }}
-              {% endif %}
-            {% endfor %}
-          </small>
         </p>
 
         <!-- Toggle switch -->
