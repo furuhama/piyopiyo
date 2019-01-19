@@ -1,16 +1,27 @@
 ---
 layout: post
-title: thread & fiber
+title: Thread & Fiber (& Guild)
 date: 2019-01-02 13:38:05
 tag: [minipost]
 ---
 
-thread と fiber の違いがよくわかってなかったんだけど
+Thread と Fiber の違いがよくわかってなかったんだけど
 
-thread: プリエンプティブなマルチタスクを実現するための仕組み
+Thread: プリエンプティブなマルチタスクを実現するための仕組み
 
-fiber: ノンプリエンプテイブな強調マルチタスクを実現するための仕組み
+Fiber: ノンプリエンプテイブな協調マルチタスクを実現するための仕組み
 
 ようは制御をどうやって他人に渡すかの差らしい。なるほどね。
 
-ちなみに fiber の方が thread よりも軽量に実行できるらしい
+ちなみに Fiber の方が Thread よりも軽量に実行できるらしい
+
+---
+
+あと Guild はなんなのかっていうと、コアを複数使って並列に処理を進める場合に
+
+排他制御を行うための実行単位が Guild らしい。
+
+* Guild has many Threads
+* Thread has many Fibers
+
+な関係らしい。ざっくりね。
