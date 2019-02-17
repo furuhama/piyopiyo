@@ -1,0 +1,14 @@
+---
+layout: post
+title: Express
+date: 2019-02-17 18:29:48
+tag: [minipost]
+---
+
+たまには js 書くかと思って Express + Sequelize でシンプルな web server & RDBMS の構成のアプリケーションを書いた。
+
+https://github.com/furuhama/express-api-server
+
+js の `.catch` とかでカスケードしていけるのはいいね。ちゃんと成功/失敗のある処理を扱える感じがすごくいい。(Ruby だと文法レベルでは隠蔽されちゃうので)
+
+今読んでる本に乗っている実装が js で書かれているっぽいので、次はそれを読みながら自分でも書いてみようかな。
