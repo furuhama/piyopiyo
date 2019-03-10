@@ -16,4 +16,8 @@ Ruby, Rust, Golang
 2013-2018: University of Tokyo
 
 #### job:
-2018-: Software Engineer
+2018-: Software Engineer at MoneyForward inc.
+
+## Contact
+
+yuuuuusuke0210[at]gmail.com
