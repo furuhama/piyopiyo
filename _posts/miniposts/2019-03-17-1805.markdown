@@ -1,0 +1,16 @@
+---
+layout: post
+title: Linked-List
+date: 2019-03-17 18:05:25
+tag: [minipost]
+---
+
+https://doc.rust-lang.org/std/collections/struct.LinkedList.html
+
+https://github.com/rust-lang/rust/blob/master/src/liballoc/collections/linked_list.rs
+
+Rust で LinkedList やろうとするとこんな風になるよね。 `unsafe` は仕方ない。
+
+それはそれとして Rust を The book みたいなコンテンツからざーっとやり直そうかなって思っている。
+
+蟹本は原著を読んだのだけど、昨年末に出たあれの翻訳版買って読むのもいいな。
