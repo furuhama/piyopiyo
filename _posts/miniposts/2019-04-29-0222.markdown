@@ -1,0 +1,12 @@
+---
+layout: post
+title: innodb_ruby
+date: 2019-04-29 02:22:57
+tag: [minipost]
+---
+
+https://github.com/jeremycole/innodb_ruby
+
+これかなりちゃんと作ってあってすごいな
+
+Jeremy Cole の記事はかなり参考になるし、この人が言っている「何かを勉強する時にはまずラフな理解をした上で、それを自分で(できればコピペにならないように別の言語で)書き直す」というアプローチはすごく学習効率が良さそうでいいなって思った。
