@@ -97,3 +97,4 @@ MySQL では一つのテーブルが一つの `space` を持つという構造�
 
 - [MySQL :: MySQL 5.7 Reference Manual :: 14.6.3 Tablespaces](https://dev.mysql.com/doc/refman/5.7/en/innodb-tablespace.html)
 - [The basics of InnoDB space file layout](https://blog.jcole.us/2013/01/03/the-basics-of-innodb-space-file-layout/)
+- [Page management InnoDB space files](https://blog.jcole.us/2013/01/04/page-management-in-innodb-space-files/)
