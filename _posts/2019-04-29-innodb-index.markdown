@@ -63,11 +63,12 @@ InnoDB は B+Tree を利用した index を基本構造としており、また�
 
 ### Index System Records
 
-全ての index は `infimum` と `supremum` と呼ばれる 2 つの system record を保持している。
+全ての index page は `infimum` と `supremum` と呼ばれる 2 つの system record を保持している。
 
-`infimum` はその index に存在するどの record よりも低く最大の値を持ち、next record として index 内で最小の key 値を持つ record へのポインタを持つ。 `supremum` は対照的にどの record よりも高く最小の key 値を持つ。
+`infimum` はその index page に存在するどの record よりも低い key 値を持ち、next record として user record 内で最小の key 値を持つ record へのポインタを持つ。 `supremum` は対照的にどの record よりも高い key 値を持つ。
 
-はじめはどちらも root の page に存在するが、 index が大きくなるにしたがって、 `infimum` は一番小さい leaf page にいくし `supremum` は一番大きい leaf page にいく。
+これによって page 全体を走査しなくてもスキップする page というのを特定することができる。
+
 
 ## 参考
 - [The physical structure of InnoDB index pages](https://blog.jcole.us/2013/01/07/the-physical-structure-of-innodb-index-pages/)
