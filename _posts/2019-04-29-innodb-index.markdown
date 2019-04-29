@@ -65,9 +65,9 @@ InnoDB は B+Tree を利用した index を基本構造としており、また�
 
 全ての index page は `infimum` と `supremum` と呼ばれる 2 つの system record を保持している。
 
-`infimum` はその index page に存在するどの record よりも低い key 値を持ち、next record として user record 内で最小の key 値を持つ record へのポインタを持つ。 `supremum` は対照的にどの record よりも高い key 値を持つ。
+`infimum` はその index page に存在するどの record よりも低く最大の key 値を持ち、next record として user record 内で最小の key 値の record を持つ。 `supremum` は対照的にどの record よりも高く最小の key 値を持つ。
 
-これによって page 全体を走査しなくてもスキップする page というのを特定することができる。
+これによって page 全体を走査しなくてもスキップする page というのを特定することができるっぽい。
 
 
 ## 参考
