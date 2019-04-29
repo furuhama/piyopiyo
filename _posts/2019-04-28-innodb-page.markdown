@@ -66,7 +66,7 @@ MySQL では一つのテーブルが一つの `space` を持つという構造�
 
 ## page の内部構造
 
-`page` は 38 byte のヘッダと 8 byte のトレイラを持つ。残りは肝心の中身。
+`page` はそれぞれ `FIL Header`, `FIL Trailer` と呼ばれる 38 byte のヘッダと 8 byte のトレイラを持つ。残りは肝心の中身。
 
 ### ヘッダの構成
 
