@@ -72,3 +72,5 @@ InnoDB は B+Tree を利用した index を基本構造としており、また�
 
 ## 参考
 - [The physical structure of InnoDB index pages](https://blog.jcole.us/2013/01/07/the-physical-structure-of-innodb-index-pages/)
+- [MySQL :: MySQL 5.7 Reference Manual :: 14.6.2.2 The Physical Structure of an InnoDB Index](https://dev.mysql.com/doc/refman/5.7/en/innodb-physical-structure.html)
+- [MySQL :: MySQL Internals Manual :: 22.2.1 High-Altitude View](https://dev.mysql.com/doc/internals/en/innodb-page-overview.html)
