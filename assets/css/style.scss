@@ -302,3 +302,11 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+header {
+  p.view {
+    a {
+      margin: 5px;
+    }
+  }
+}

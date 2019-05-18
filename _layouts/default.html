@@ -9,8 +9,7 @@
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="shortcut icon" type="image/png" href="{{ site.url }}/favicon.png?">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/regular.css" integrity="sha384-z3ccjLyn+akM2DtvRQCXJwvT5bGZsspS4uptQKNXNg778nyzvdMqiGcqHVGiAUyY" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <script type="text/javascript" src="{{ site.url }}/assets/javascript/switch.js"></script>
   </head>
 
@@ -21,8 +20,13 @@
         <a href="{{ site.url }}/"> <h1>{{ site.title | default: site.github.repository_name }}</h1></a>
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
-        <p class="view">View: <a href="https://github.com/{{ site.github_username }}">GitHub <small>{{ site.github_username }}</small></a></p>
-        <p class="view">About: <a href="{{ site.url }}/about">me</a></p>
+
+        <p class="view">
+          <a href="{{ site.url }}/about"><i class="fas fa-portrait fa-2x"></i></a>
+          <a href="https://github.com/{{ site.github_username }}"><i class="fab fa-github fa-2x"></i></a>
+          <a href="{{ site.url }}/feed.xml"><i class="fas fa-rss fa-2x"></i></a>
+          <a href="{{ site.url }}/miniposts"><i class="fas fa-ghost fa-2x"></i></a>
+        </p>
 
         <!-- main posts -->
 
@@ -37,25 +41,17 @@
           </small>
         </p>
 
-        <p class="view"><a href="{{ site.url }}/feed.xml"><i class="far fa-file-code"></i> feed</a></p>
-
-        <!-- mini posts like a diary -->
-
-        <p class="view">
-          Miniposts: <a href="{{ site.url }}/miniposts"> 👀 take a look 👀</a>
-        </p>
-
         <!-- Toggle switch -->
 
         <p class="view">
-          <i class="far fa-sun"></i>
+          <i class="far fa-sun fa-lg"></i>
 
           <label class="switch">
             <input type="checkbox">
             <span class="slider round"></span>
           </label>
 
-          <i class="far fa-moon"></i>
+          <i class="far fa-moon fa-lg"></i>
         </p>
 
       </header>
