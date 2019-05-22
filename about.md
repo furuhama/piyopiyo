@@ -1,9 +1,9 @@
 ---
 layout: default
-title: About me
+title: About
 ---
 
-## About: me
+## About
 
 #### name:
 Furuhama Yusuke
