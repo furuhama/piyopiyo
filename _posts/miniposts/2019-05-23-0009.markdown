@@ -1,0 +1,23 @@
+---
+layout: post
+title: MySQL のパーサ
+date: 2019-05-23 00:09:42
+tag: [minipost]
+---
+
+故あって MySQL ターゲットに生成された SQL をパースして構造化した上である判定に使いたくなっている
+
+外部のライブラリに頼る手もなくはないんだけど、信頼性とか仕様への追従面を考えるとなるべくなら MySQL Server が公式に利用しているパーサをそのままそこだけ流用したい。
+
+このクエリはもともと Rails の ActiveRecord 経由で生成されるので、モデルからのメソッドコールで SQL を作成する際の中間表現みたいなものを見て今回の目的のために判定する方が筋がいいのかもしれないんだけど、どっちが構造変わりにくいかで考えると MySQL の公式のクエリパーサかなあと思っている。
+
+ただシンプルな SELECT 文だけなのでまあ正規表現で頑張れないこともなくて、実際今は正規表現で頑張っている。
+
+MySQL の SQL のトークナイズ & パースは lex と yacc を使って実装されている？のかな。 bison も make しているけど lex とか yacc とか bison とかの役割や関係性が全然わかってないから責務や使い方から調べて流用できるのか調査しないとだな...。
+
+以下のあたりが関係ありそうかな 🤔
+
+- https://github.com/mysql/mysql-server/blob/5.7/sql/lex.h
+- https://github.com/mysql/mysql-server/blob/5.7/sql/sql_lex.cc
+- https://github.com/mysql/mysql-server/blob/5.7/sql/sql_lex.h
+- https://github.com/mysql/mysql-server/blob/5.7/sql/sql_yacc.yy
