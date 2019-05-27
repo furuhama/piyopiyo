@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Golang の正規表現
+title: Golang の正規表現ライブラリの処理の流れをざっくり掴む
 date: 2019-05-27 06:27:54
 tag: [golang, regexp]
 ---
