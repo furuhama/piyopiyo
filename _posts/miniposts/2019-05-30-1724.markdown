@@ -1,0 +1,39 @@
+---
+layout: post
+title: msgpack-ruby を自分でビルドしてみる
+date: 2019-05-30 17:24:56
+tag: [minipost]
+---
+
+native extension を利用している gem をちゃんと読んだことなかったなと思って、 RubyKaigi でセッションを聞いたというのもあるし msgpack-ruby を読んでみている。
+
+だけど JRuby や Rubinius をサポートしていてターゲットによる if 文が多かったので、その辺のコードを全部消した上で自分でビルドしてみた。
+
+https://github.com/furuhama/msgpack-ruby/tree/just_latest_cruby
+
+ビルドも具体的にどんなことをしているのか知らなくて、今回初めて手動でやってみた。
+
+手順としては
+
+```
+$ cd /path/to/msgpack-ruby
+
+$ ruby ext/msgpack/extconf.rb
+
+$ make
+
+$ mv msgpack.bundle ./lib/msgpack
+```
+
+とかでできると思う。
+
+最後の mv がうまくやれば不要なんじゃないかって思っているんだけど、 Makefile とかよくわからないのでとりあえずこれで。
+
+irb なりを開いた上で
+
+```
+> $LOAD_PATH.push File.expand_path('./lib')
+> require 'msgpack'
+```
+
+とかすればビルドしたものを使えるかな。
