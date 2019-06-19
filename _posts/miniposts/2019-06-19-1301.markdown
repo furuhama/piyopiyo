@@ -1,0 +1,21 @@
+---
+layout: post
+title: index のオーダー
+date: 2019-06-19 13:01:48
+tag: [minipost]
+---
+
+index って簡単に逆順で走査できるのかと思ったら特に複合 index の場合とかあんまり自明じゃないっぽい...？
+とポスグレのドキュメントを読んでいて思った。
+
+https://www.postgresql.jp/document/11/html/indexes-ordering.html
+
+そして MySQL では index の order をメタデータとしては保持するけど実際のストレージの構造は全部昇順に直されるみたいだ。
+
+> A key_part specification can end with ASC or DESC. These keywords are permitted for future extensions for specifying ascending or descending index value storage. Currently, they are parsed but ignored; index values are always stored in ascending order.
+
+https://dev.mysql.com/doc/refman/5.7/en/create-index.html
+
+なるほどねえ...
+
+今まで index の逆順のことあんまり考えてこなかったあたり僕はセンスがないなあと思いました。
