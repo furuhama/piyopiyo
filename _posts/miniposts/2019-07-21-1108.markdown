@@ -1,0 +1,25 @@
+---
+layout: post
+title: NeoVim の起動時間
+date: 2019-07-21 11:08:27
+tag: [minipost]
+---
+
+普段エディタは NeoVim というやつを使っているんだけど最近起動がもたつくようになったなと思ってちょっと調べていた。
+
+まず以下のコマンドで起動時の処理を所要時間のプロファイルが取れる。
+
+```
+$ nvim --startuptime <log file name>
+```
+
+僕の場合は `VimEnter autocommands` という処理が全体の 75% くらいの時間を占めていたのでそこをなんとかしようって思った。
+
+なので autogroup と autocmd を使っていた処理を別の形に切り出してみた(というかもともと autocmd 使う必要なかったね...)
+
+もともと 1500ms くらいかかってたっぽい起動が 500ms くらいにまでなったのでまあいいかな...(気づかないうちに随分遅くなっていた)
+
+https://github.com/furuhama/dotfiles/commit/523705f9e1f4d54938d6f1a0d4c1a0583b9db301
+https://github.com/furuhama/dotfiles/commit/ea1e888f5cacf9f7c950d866de1018bdeb0a2b52
+
+ちなみに `--noplugin` オプションもつけると 160ms くらいで起動するので、普段もなんとか 2, 300ms くらいにまで持っていきたいな。いらない plugin 減らすか...。
