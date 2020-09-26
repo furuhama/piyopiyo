@@ -1,4 +1,5 @@
 post:
+  dir: _posts
   filename: <date:%Y-%m-%d>-title.markdown
   body: |
     ---
@@ -8,6 +9,7 @@ post:
     tag: []
     ---
 minipost:
+  dir: _posts/miniposts
   filename: <datetime:%Y-%m-%d-%H%M>.markdown
   body: |
     ---
