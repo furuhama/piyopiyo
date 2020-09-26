@@ -10,6 +10,6 @@ and then, please input post filename.
 
 ## Make a minipost
 
-`$ ./minipost.rb`
+`$ gendoc minipost`
 
 and make a minipost with a timestamp
