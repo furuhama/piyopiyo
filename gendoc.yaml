@@ -1,0 +1,18 @@
+post:
+  filename: <date:%Y-%m-%d>-title.markdown
+  body: |
+    ---
+    layout: post
+    title:
+    date: <datetime:%Y-%m-%d %H:%M:%S>
+    tag: []
+    ---
+minipost:
+  filename: <datetime:%Y-%m-%d-%H%M>.markdown
+  body: |
+    ---
+    layout: post
+    title:
+    date: <datetime:%Y-%m-%d %H:%M:%S>
+    tag: [minipost]
+    ---
