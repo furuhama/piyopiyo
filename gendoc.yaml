@@ -1,6 +1,6 @@
 post:
   dir: _posts
-  filename: <date:%Y-%m-%d>-title.markdown
+  filename: <date:%Y-%m-%d>-<input>.markdown
   body: |
     ---
     layout: post
