@@ -262,7 +262,6 @@ DEPENDENCIES
   jekyll-feed
   jekyll-theme-minimal
   pry
-  tzinfo-data
 
 BUNDLED WITH
    2.1.4
