@@ -1,0 +1,4 @@
+---
+layout: miniposts
+title: Miniposts
+---
