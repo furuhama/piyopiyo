@@ -18,6 +18,9 @@ Ruby, Rust, Golang
 #### job:
 2018-: Software Engineer at MoneyForward inc.
 
+#### resume:
+[resume](https://github.com/furuhama/resume)
+
 ## Contact
 
 yuuuuusuke0210[at]gmail.com
