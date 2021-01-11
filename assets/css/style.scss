@@ -209,6 +209,11 @@ body.dark {
     color: $font-primary-color-dark;
   }
 
+  textarea {
+    background: $background-color-dark;
+    color: $background-code-color;
+  }
+
   h1.post-title {
     color: $font-primary-color-dark;
     background: $background-title-color-dark;
