@@ -40,9 +40,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor/bundle/
-  - tags
-  - tags.lock
-  - tags.temp
   - README.md
   - node_modules/
   - gendoc.yaml
