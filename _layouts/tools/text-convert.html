@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<h1 class="post-title">{{ page.title }}</h1>
+
+<table>
+    <tbody>
+        <tr>
+            <td>
+            Base64 Text
+            <br>
+            <textarea cols="50" rows="2" id="text-escape-base64-text" onkeyup="javascript:updatePlainText(value)" onkeydown="javascript:textareaResize(event)"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            UTF-8 Text
+            <br>
+            <textarea disabled cols="50" rows="2" id="text-escape-utf8-text"></textarea>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<script type="text/javascript" src="{{ site.url }}/assets/javascript/text-convert.js"></script>
