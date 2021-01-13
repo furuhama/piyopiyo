@@ -5,7 +5,11 @@ layout: default
 {% for post in site.posts %}
   {% if post.tags contains 'minipost' %}
     <p>
-      <h2>{{ post.title }}</h2>
+      <a id="minipost-{{ post.date | date: "%Y-%m-%d-%H-%M-%S"}}">
+        <h2>
+          <a href="#minipost-{{ post.date | date: "%Y-%m-%d-%H-%M-%S" }}">{{ post.title }}</a>
+        </h2>
+      </a>
 
       {{post.content}}
 
