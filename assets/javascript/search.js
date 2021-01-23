@@ -13,17 +13,18 @@ xhr.onreadystatechange = () => {
       // minipost の場合にはアンカーリンクにする
       const url = obj.tags.includes('minipost') ? `/miniposts${obj.minipost_anker}` : obj.url;
 
-      return { id: idx, title: obj.title, tags: obj.tags, url: url };
+      return { id: idx, title: obj.title, content: obj.content, tags: obj.tags, url: url };
     });
 
     // 検索用 index の構築
     idx = lunr(function() {
       this.field('id');
       this.field('title', { boost: 10 });
+      this.field('content', { boost: 10 });
       this.field('tags');
 
       searchData.forEach((data) => {
-        this.add({ id: data.id, title: data.title, tags: data.tags });
+        this.add({ id: data.id, title: data.title, content: data.content, tags: data.tags });
       });
     });
   }

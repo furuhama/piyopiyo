@@ -1,10 +1,17 @@
 ---
 layout: null
 ---
+{% capture nl %}
+{% endcapture %}
+{% capture dq %}"{% endcapture %}
+{% capture sq %}'{% endcapture %}
+{% capture bs %}\{% endcapture %}
+
 {
   {% for post in site.posts %}"{{ post.url | slugify }}": {
     "title": "{{ post.title | xml_escape }}",
     "url": "{{ post.url | xml_escape }}",
+    "content": "{{ post.content | replace: nl, " " | replace: dq, " " | replace: sq, " " | replace: bs, " " | replace: "[", " " | repalce: "]", " " | replace: "/", " " | replace: "%", " " | replace: "#", " " | replace: "`", " " | replace: "|", " " | replace: "(", " " | replace: ")", " " | replace: "=", " " | normalize_whitespace | xml_escape }}",
     "minipost_anker": "#minipost-{{ post.date | date: "%Y-%m-%d-%H-%M-%S" }}",
     "tags": [
       {% for tag in post.tags %}"{{ tag }}"{% unless forloop.last %},
