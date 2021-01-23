@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<h1 class="post-title">検索</h1>
+
+<p>
+    タイトルとタグを fuzzy 検索します
+</p>
+
+<p>
+    <input id="searchtext" onkeyup="javascript:refreshSearchResult(value)"></textarea>
+</p>
+
+<ul id="results"></ul>
+
+<p>
+    powered by <a href="https://lunrjs.com/">lunr.js</a>
+</p>
+
+<script type="text/javascript" src="https://unpkg.com/lunr/lunr.js"></script>
+<script type="text/javascript" src="{{ site.url }}/assets/javascript/search.js"></script>
