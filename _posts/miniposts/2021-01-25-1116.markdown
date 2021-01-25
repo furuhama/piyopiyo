@@ -1,0 +1,28 @@
+---
+layout: post
+title: factory reset RTA
+date: 2021-01-25 11:16:15
+tag: [minipost]
+---
+
+私用の PC (たしか Macbook Pro 2019 くらい) の Xcode の Command line tools が変で Ruby やら Python やらのビルドができなくなってた
+
+同じタイミングでちょうど最近会社で利用してるサービスへのログインの制約が厳しくなった(社用 PC でないとログインできなくなった)ので、それにあわせて私用 PC から会社関連の一切を取り去ってしまおうと思った
+
+そんなわけで昨日の夜 23 時くらいから本読みながら factory reset をして再度環境構築してた
+
+やったことは以下
+
+- local にしかないファイルのバックアップ
+  - push してないコードは全部 GitHub になげる
+  - PDF なんかは Google Drive へ
+- リカバリーモードで起動してパーティションを作り直し(ここでデータ消す)
+- OS 入れ直し
+- OS 初期セットアップ
+  - 最近の mac は初期設定の項目が異常に多くてクレカまで登録させられそうな勢いだった、かなりアグレッシブだし好奇心観点でもそろそろ別の OS 使いたいなと改めて思った
+- Xcode と Command line tools 入れる
+- Firefox, Alfred, Karabiner, Docker for mac, Spotify, Authy あたりは何も考えずに突っ込む
+- homebrew 入れる
+- rbenv 入れて 3.0.0 が入ることを確認
+
+たまに覚悟決めて factory reset するのも悪くないね
