@@ -2,9 +2,13 @@
 
 -> [バベルの図書館は完成しない](https://furuhama.github.io/)
 
+## Requirements
+
+- [gendoc](https://github.com/furuhama/gendoc)
+
 ## Make a post
 
-`$ ./post.rb`
+`$ gendoc post`
 
 and then, please input post filename.
 
