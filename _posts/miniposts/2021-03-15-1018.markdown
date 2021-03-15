@@ -1,0 +1,16 @@
+---
+layout: post
+title: HEAD 向けてる neovim のビルド
+date: 2021-03-15 10:18:18
+tag: [minipost]
+---
+
+homebrew でパッケージ管理をしていて neovim だけは安定版ではなく HEAD に向けてビルドをしているのでその手順のメモ
+
+```
+# how to install
+$ brew install --HEAD neovim
+
+# how to upgrade
+$ brew upgrade --fetch-HEAD --build-from-source neovim
+```
