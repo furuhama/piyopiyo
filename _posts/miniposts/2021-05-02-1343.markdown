@@ -1,0 +1,48 @@
+---
+layout: post
+title: terraform で環境ごとの差異をどう表現するか
+date: 2021-05-02 13:43:28
+tag: [minipost]
+---
+
+特定の環境のみ作りたいリソースを表現するときに
+
+terraform variables で environment 的な変数を定義しておきつつ
+
+```
+resource "resource" "name" {
+  count = {
+    test = 0
+    prod = 1
+  }[var.environment]
+}
+```
+
+みたいなことをしていた
+
+でそうすると付随するリソースで
+
+```
+resource.name[0].id
+```
+
+みたいなことをしないといけないのと、場合によっては
+
+```
+some_reference = {
+  test = null
+  prod = resource.name[0].id
+}
+```
+
+記述が出てくる
+
+この場合に tuple で記述すると variable の設定に関わらず tuple の中身はすべて評価する必要が出てきて `test` の場合にエラーになってしまう
+
+terraform にはこれと近いことを表現する方法で例えば三項演算子もあり、以下のようにも書けるがこちらは偽になる分岐側の式は評価しない
+
+```
+some_reference = var.environment == "prod" ? resource.name[0].id : null
+```
+
+というわけでほとんど同じようなものだと考えており、見やすい tuple を活用していたけど三項演算子でないと実現できないケースもあるのでメモ
