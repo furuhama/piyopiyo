@@ -24,4 +24,6 @@ Money Forward inc. (2018-)
 
 ## Contact
 
-yuuuuusuke0210[at]gmail.com
+mail: yuuuuusuke0210[at]gmail.com
+
+twitter: [@_furuhama](https://twitter.com/_furuhama)
