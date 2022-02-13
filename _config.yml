@@ -32,6 +32,8 @@ plugins:
   - jemoji
   - jekyll-feed
   - jekyll-sitemap
+timezone: Asia/Tokyo
+future: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
