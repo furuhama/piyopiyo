@@ -1,7 +1,7 @@
 ---
 layout: post
 title: terraform で環境ごとの差異をどう表現するか
-date: 2021-05-02 13:43:28
+date: 2021-05-02 13:43:28 +0900
 tag: [minipost]
 ---
 

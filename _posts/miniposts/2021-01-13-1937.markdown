@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ラフマニノフ
-date: 2021-01-13 19:37:24
+date: 2021-01-13 19:37:24 +0900
 tag: [minipost]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 同一デバイス上の複数ブラウザ間での cookie 同期
-date: 2021-01-28 01:38:04
+date: 2021-01-28 01:38:04 +0900
 tag: [minipost]
 ---
 

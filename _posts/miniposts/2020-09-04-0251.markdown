@@ -1,7 +1,7 @@
 ---
 layout: post
 title: この半年での変化
-date: 2020-09-04 02:51:12
+date: 2020-09-04 02:51:12 +0900
 tag: [minipost]
 ---
 

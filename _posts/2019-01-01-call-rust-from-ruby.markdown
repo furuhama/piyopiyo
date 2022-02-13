@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ruby から ffi を使って Rust を呼ぶ
-date: 2019-01-01 13:03:45
+date: 2019-01-01 13:03:45 +0900
 tag: [rust, ruby, ffi]
 ---
 

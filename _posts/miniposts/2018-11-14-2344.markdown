@@ -1,7 +1,7 @@
 ---
 layout: post
 title: view テンプレート
-date: 2018-11-14 23:44:52
+date: 2018-11-14 23:44:52 +0900
 tag: [minipost]
 ---
 

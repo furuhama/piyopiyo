@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Linked-List
-date: 2019-03-17 18:05:25
+date: 2019-03-17 18:05:25 +0900
 tag: [minipost]
 ---
 

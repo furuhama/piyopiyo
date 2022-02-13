@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 最近の勉強 (RubyKaigi を経て)
-date: 2019-04-29 00:59:40
+date: 2019-04-29 00:59:40 +0900
 tag: [minipost]
 ---
 

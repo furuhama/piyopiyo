@@ -1,7 +1,7 @@
 ---
 layout: post
 title: gendoc という YAML からドキュメントを生成するコマンドを作った
-date: 2020-09-28 01:54:08
+date: 2020-09-28 01:54:08 +0900
 tag: [rust, cli]
 ---
 
@@ -35,12 +35,12 @@ crates.io は以下
 ```
 post:
   dir: _posts
-  filename: <date:%Y-%m-%d>-<input>.markdown
+  filename: <date:%Y-%m-%d>-<input>.markdown +0900
   body: |
     ---
     layout: post
     title:
-    date: <datetime:%Y-%m-%d %H:%M:%S>
+    date: <datetime:%Y-%m-%d %H:%M:%S> +0900
     tag: []
     ---
 minipost:
@@ -50,7 +50,7 @@ minipost:
     ---
     layout: post
     title:
-    date: <datetime:%Y-%m-%d %H:%M:%S>
+    date: <datetime:%Y-%m-%d %H:%M:%S> +0900
     tag: [minipost]
     ---
 ```

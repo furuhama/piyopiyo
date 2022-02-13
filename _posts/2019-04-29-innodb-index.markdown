@@ -1,7 +1,7 @@
 ---
 layout: post
 title: InnoDB における index page のデータ構造
-date: 2019-04-29 12:43:40
+date: 2019-04-29 12:43:40 +0900
 tag: [mysql, db, innodb]
 ---
 

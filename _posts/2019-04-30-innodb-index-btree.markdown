@@ -1,7 +1,7 @@
 ---
 layout: post
 title: InnoDB の B+Tree Index について
-date: 2019-04-29 19:59:05
+date: 2019-04-29 19:59:05 +0900
 tag: [mysql, db, innodb]
 ---
 

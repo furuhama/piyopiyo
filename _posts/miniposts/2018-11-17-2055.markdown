@@ -1,7 +1,7 @@
 ---
 layout: post
 title: C 言語
-date: 2018-11-17 20:55:40
+date: 2018-11-17 20:55:40 +0900
 tag: [minipost]
 ---
 

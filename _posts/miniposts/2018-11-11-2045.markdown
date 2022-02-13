@@ -1,7 +1,7 @@
 ---
 layout: post
 title: TypeScript
-date: 2018-11-11 20:45:02
+date: 2018-11-11 20:45:02 +0900
 tag: [minipost]
 ---
 

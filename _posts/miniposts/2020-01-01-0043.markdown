@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 2020 年
-date: 2020-01-01 00:43:28
+date: 2020-01-01 00:43:28 +0900
 tag: [minipost]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 岩手県
-date: 2019-02-11 19:27:17
+date: 2019-02-11 19:27:17 +0900
 tag: [minipost]
 ---
 

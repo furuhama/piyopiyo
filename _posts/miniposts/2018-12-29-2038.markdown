@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 年の瀬
-date: 2018-12-29 20:38:54
+date: 2018-12-29 20:38:54 +0900
 tag: [minipost]
 ---
 

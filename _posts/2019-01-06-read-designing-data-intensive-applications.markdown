@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Designing Data-Intensive Applications を読んでいる
-date: 2019-01-06 15:24:37
+date: 2019-01-06 15:24:37 +0900
 tag: [book, database, application]
 ---
 

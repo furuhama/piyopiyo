@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ブラウザにおける状態の持ち方
-date: 2018-11-10 19:51:22
+date: 2018-11-10 19:51:22 +0900
 tag: [web, browser, javascript]
 ---
 

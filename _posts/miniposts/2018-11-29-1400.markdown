@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 文字コード
-date: 2018-11-29 14:00:08
+date: 2018-11-29 14:00:08 +0900
 tag: [minipost]
 ---
 

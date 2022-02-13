@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ルックバック
-date: 2021-07-19 02:43:35
+date: 2021-07-19 02:43:35 +0900
 tag: [minipost]
 ---
 

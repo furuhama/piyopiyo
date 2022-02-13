@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 認証とか認可とか
-date: 2019-02-16 22:28:57
+date: 2019-02-16 22:28:57 +0900
 tag: [minipost]
 ---
 

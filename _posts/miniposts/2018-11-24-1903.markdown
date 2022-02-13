@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Colorize csv
-date: 2018-11-24 19:03:04
+date: 2018-11-24 19:03:04 +0900
 tag: [minipost]
 ---
 

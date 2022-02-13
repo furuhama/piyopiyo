@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 麻雀
-date: 2021-01-28 23:09:12
+date: 2021-01-28 23:09:12 +0900
 tag: [minipost]
 ---
 

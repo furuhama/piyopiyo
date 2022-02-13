@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 懐かしい時代
-date: 2021-05-18 11:15:37
+date: 2021-05-18 11:15:37 +0900
 tag: [minipost]
 ---
 

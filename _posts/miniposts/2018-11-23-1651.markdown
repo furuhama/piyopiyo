@@ -1,7 +1,7 @@
 ---
 layout: post
 title: どれ読もう
-date: 2018-11-23 16:51:50
+date: 2018-11-23 16:51:50 +0900
 tag: [minipost]
 ---
 

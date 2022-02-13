@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MySQL のパーサ
-date: 2019-05-23 00:09:42
+date: 2019-05-23 00:09:42 +0900
 tag: [minipost]
 ---
 

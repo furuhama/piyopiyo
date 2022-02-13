@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Puma の内部構造やアーキテクチャを追う
-date: 2019-12-01 21:27:54
+date: 2019-12-01 21:27:54 +0900
 tag: [ruby, rails, puma]
 ---
 

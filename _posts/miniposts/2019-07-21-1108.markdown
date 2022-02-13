@@ -1,7 +1,7 @@
 ---
 layout: post
 title: NeoVim の起動時間
-date: 2019-07-21 11:08:27
+date: 2019-07-21 11:08:27 +0900
 tag: [minipost]
 ---
 

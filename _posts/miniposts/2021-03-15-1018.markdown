@@ -1,7 +1,7 @@
 ---
 layout: post
 title: HEAD 向けてる neovim のビルド
-date: 2021-03-15 10:18:18
+date: 2021-03-15 10:18:18 +0900
 tag: [minipost]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: webpack
-date: 2018-11-11 20:04:21
+date: 2018-11-11 20:04:21 +0900
 tag: [minipost]
 ---
 

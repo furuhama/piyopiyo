@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 長谷川白紙
-date: 2021-01-04 14:02:52
+date: 2021-01-04 14:02:52 +0900
 tag: [minipost]
 ---
 

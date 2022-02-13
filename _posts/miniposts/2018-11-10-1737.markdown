@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ダークモード
-date: 2018-11-10 17:37:07
+date: 2018-11-10 17:37:07 +0900
 tag: [minipost]
 ---
 

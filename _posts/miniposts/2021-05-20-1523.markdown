@@ -1,7 +1,7 @@
 ---
 layout: post
 title: テスト
-date: 2021-05-20 15:23:20
+date: 2021-05-20 15:23:20 +0900
 tag: [minipost]
 ---
 

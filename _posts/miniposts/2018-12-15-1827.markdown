@@ -1,7 +1,7 @@
 ---
 layout: post
 title: neovim
-date: 2018-12-15 18:27:32
+date: 2018-12-15 18:27:32 +0900
 tag: [minipost]
 ---
 

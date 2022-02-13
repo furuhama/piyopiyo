@@ -1,7 +1,7 @@
 ---
 layout: post
 title: dry-rb
-date: 2019-01-03 17:16:49
+date: 2019-01-03 17:16:49 +0900
 tag: [minipost]
 ---
 

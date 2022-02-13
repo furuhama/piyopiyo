@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ISUCON10 の予選を 7 位で通過した
-date: 2020-09-13 22:12:11
+date: 2020-09-13 22:12:11 +0900
 tag: [isucon, ruby, mysql]
 ---
 
