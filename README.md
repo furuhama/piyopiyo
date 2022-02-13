@@ -1,18 +1,22 @@
-## my blog
+## What's this
+
+my blog repo
 
 -> [バベルの図書館は完成しない](https://furuhama.github.io/)
 
-## Requirements
+## Generate post templates
+
+### Requirements
 
 - [gendoc](https://github.com/furuhama/gendoc)
 
-## Make a post
+### Make a post
 
 `$ gendoc post`
 
 and then, please input post filename.
 
-## Make a minipost
+### Make a minipost
 
 `$ gendoc minipost`
 
