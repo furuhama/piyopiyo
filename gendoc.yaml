@@ -5,7 +5,7 @@ post:
     ---
     layout: post
     title:
-    date: <datetime:%Y-%m-%d %H:%M:%S>
+    date: <datetime:%Y-%m-%d %H:%M:%S> +0900
     tag: []
     ---
 minipost:
@@ -15,6 +15,6 @@ minipost:
     ---
     layout: post
     title:
-    date: <datetime:%Y-%m-%d %H:%M:%S>
+    date: <datetime:%Y-%m-%d %H:%M:%S> +0900
     tag: [minipost]
     ---
