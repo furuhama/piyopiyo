@@ -1,0 +1,20 @@
+---
+layout: post
+title: Kinesis Advantage を買った
+date: 2022-04-23 23:46:15 +0900
+tag: [minipost]
+---
+
+Kinesis Advantage を買った
+360 までの繋ぎのつもりなので v1 のものを買った
+
+設定をメモしておこうと思う
+
+kinesis 側の設定
+Caps Lock の音の削除: Program + -
+キー音の削除: Program + \
+
+karabiner の設定
+End -> left command
+Page Down -> right command
+Delete -> ESC (kinesis のみに適用する)
