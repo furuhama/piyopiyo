@@ -14,7 +14,7 @@ kinesis 側の設定
 Caps Lock の音の削除: Program + -
 キー音の削除: Program + \
 
-karabiner の設定
-End -> left command
-Page Down -> right command
-Delete -> ESC (kinesis のみに適用する)
+karabiner の設定 (kinesis のみに適用する)
+left control -> left command
+right control -> right command
+Delete -> ESC
